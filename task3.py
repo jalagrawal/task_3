@@ -1,7 +1,7 @@
 import os
 import cv2
 import pandas as pd
-import numpy as np
+import numpy as np 
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
@@ -62,5 +62,3 @@ def pothole_detection(images):
     df = pd.DataFrame(results, columns=['file_name', 'pothole_count'])
     df.to_csv('pothole_detection_results.csv', index=False)
 
-# Example call to the function (uncomment to use in real scenarios):
-# pothole_detection('path_to_image_folder')
